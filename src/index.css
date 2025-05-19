@@ -33,6 +33,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'TTTravels-Regular';
+  src: url('/src/assets/Font/TTTravels-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 .poppins-medium {
   font-family: "Poppins", sans-serif;

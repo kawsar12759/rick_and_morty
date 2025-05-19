@@ -71,7 +71,7 @@ const Home = () => {
                         </span>HE <span className='inline'><img className="h-[1em]  mb-6 inline" src={portal} alt="" /></span> <span className='bg-gradient-to-r from-[#9DFE00] to-[#14D9E5] bg-clip-text text-transparent' style={{ fontFamily: 'TTTravels-ExtraBold' }}>RICK & MORTY</span> WIKI </h1>
                         </div>
                         <div className='xl:flex xl:flex-row-reverse items-center justify-center gap-16 py-5 xl:px-24' style={{ fontFamily: 'TTTravels-DemiBold' }}>
-                            <p className='text-[#14D9E5] text-xs  lg:text-sm mb-6 xl:mb-0'>Brilliant but boozy scientist Rick hijacks his fretful
+                            <p className='text-[#14D9E5] text-xs lg:text-sm mb-6 xl:mb-0'>Brilliant but boozy scientist Rick hijacks his fretful
                                 teenage grandson, Morty, for wild escapades
                                 in other worlds and alternate dimensions.</p>
                             <button className='btn rounded-full h-10 w-40 lg:h-14 lg:w-52 flex border-none bg-gradient-to-r from-[#9DFE00] to-[#14D9E5] text-white items-center justify-center text-md  lg:text-xl'><img className='mr-2 h-5 w-5' src={play} alt="" /> Watch Now</button>
