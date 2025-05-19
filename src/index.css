@@ -1,33 +1,36 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-
-@font-face {
-    font-family: 'TTTravels-ExtraBoldItalic';
-    src: url('/src/assets/Font/TTTravels-ExtraBoldItalic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+@theme {
+  --breakpoint-3xl: 110rem;
 }
 
 @font-face {
-    font-family: 'TTTravels-ExtraBold';
-    src: url('/src/assets/Font/TTTravels-ExtraBold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'TTTravels-ExtraBoldItalic';
+  src: url('/src/assets/Font/TTTravels-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'TTTravels-DemiBold';
-    src: url('/src/assets/Font/TTTravels-DemiBold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'TTTravels-ExtraBold';
+  src: url('/src/assets/Font/TTTravels-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'TTTravels-Medium';
-    src: url('/src/assets/Font/TTTravels-Medium.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'TTTravels-DemiBold';
+  src: url('/src/assets/Font/TTTravels-DemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TTTravels-Medium';
+  src: url('/src/assets/Font/TTTravels-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
@@ -36,10 +39,12 @@
   font-weight: 500;
   font-style: normal;
 }
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
 .scrollbar-hide {
-  -ms-overflow-style: none; 
-  scrollbar-width: none;     
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

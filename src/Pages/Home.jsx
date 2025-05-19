@@ -6,6 +6,7 @@ import gun from '../assets/images/Gun.png'
 import { useState, useEffect, useRef, } from 'react'
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
+import { Link } from 'react-router-dom'
 
 
 const Home = () => {
@@ -57,30 +58,36 @@ const Home = () => {
             <div className="absolute inset-0 bg-[#191D29] opacity-90 z-0"></div>
 
             <div className='relative z-10'>
-                <div className='absolute right-24 top-48'><img src={gun} alt="" /></div>
-                <div className='flex justify-center pt-[58px]'><img className='h-12' src={logo} alt="" /></div>
-                <div className='relative flex justify-center text-white text-9xl pt-36 px-[424px]' style={{ fontFamily: 'TTTravels-ExtraBoldItalic' }}>
 
-                    <h1 className='relative text-center '>    <span className="relative inline-block">
-                        <span className='absolute -top-36 -left-36'>
-                            <img className='w-auto h-auto max-w-none' src={bubble} alt="" />
-                        </span>
-                        T
-                    </span>HE <span className='inline'><img className="h-[1em]  mb-6 inline" src={portal} alt="" /></span> <span className='bg-gradient-to-r from-[#9DFE00] to-[#14D9E5] bg-clip-text text-transparent' style={{ fontFamily: 'TTTravels-ExtraBold' }}>RICK & MORTY</span> WIKI </h1>
+                <div className='flex justify-center pt-[58px]'><img className='h-12' src={logo} alt="" /></div>
+                <div className='flex text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl pt-16 lg:pt-28 2xl:pt-36 px-10 sm:px-16 md:px-28 lg:px-36 xl:px-60 2xl:px-72  3xl:px-80' style={{ fontFamily: 'TTTravels-ExtraBoldItalic' }}>
+                    <div>
+
+                        <div ><h1 className='relative xl:text-center'>    <span className="relative inline-block">
+                            <span className='absolute -top-6 -left-4 sm:-top-6 sm:-left-6 md:-top-10 md:-left-6 lg:-top-14 lg:-left-8  xl:-top-20 xl:-left-16 2xl:-top-24 2xl:-left-16'>
+                                <img className='h-14 w-24 sm:h-16 sm:w-28 md:h-24 md:w-36 lg:h-32 lg:w-48 xl:h-44 xl:w-52 2xl:h-52 2xl:w-60' src={bubble} alt="" />
+                            </span>
+                            T
+                        </span>HE <span className='inline'><img className="h-[1em]  mb-6 inline" src={portal} alt="" /></span> <span className='bg-gradient-to-r from-[#9DFE00] to-[#14D9E5] bg-clip-text text-transparent' style={{ fontFamily: 'TTTravels-ExtraBold' }}>RICK & MORTY</span> WIKI </h1>
+                        </div>
+                        <div className='xl:flex xl:flex-row-reverse items-center justify-center gap-16 py-5 xl:px-24' style={{ fontFamily: 'TTTravels-DemiBold' }}>
+                            <p className='text-[#14D9E5] text-xs  lg:text-sm mb-6 xl:mb-0'>Brilliant but boozy scientist Rick hijacks his fretful
+                                teenage grandson, Morty, for wild escapades
+                                in other worlds and alternate dimensions.</p>
+                            <button className='btn rounded-full h-10 w-40 lg:h-14 lg:w-52 flex border-none bg-gradient-to-r from-[#9DFE00] to-[#14D9E5] text-white items-center justify-center text-md  lg:text-xl'><img className='mr-2 h-5 w-5' src={play} alt="" /> Watch Now</button>
+
+                        </div>
+                    </div>
+                    <div><img className='h-full' src={gun} alt="" /></div>
                 </div>
-                <div className='flex items-center justify-between gap-16 px-[624px] py-12' style={{ fontFamily: 'TTTravels-DemiBold' }}>
-                    <button className='btn rounded-full h-14 w-52 flex border-none bg-gradient-to-r from-[#9DFE00] to-[#14D9E5] text-white items-center justify-center  text-xl'><img className='mr-2 h-5 w-5' src={play} alt="" /> Watch Now</button>
-                    <p className='text-[#14D9E5]'>Brilliant but boozy scientist Rick hijacks his fretful
-                        teenage grandson, Morty, for wild escapades
-                        in other worlds and alternate dimensions.</p>
-                </div>
+
             </div>
-            <div className="relative w-full  mx-auto px-[102px] pt-8">
+            <div className="relative w-full  mx-auto px-10 sm:px-16 md:px-20 lg:px-24 pt-8">
                 <div className="flex justify-between items-center mb-3">
-                    <h2 style={{ fontFamily: 'TTTravels-Medium' }} className="text-white text-2xl font-medium">Meet The Cast</h2>
-                    <button className="text-white bg-transparent border border-[#9DFE00] h-10 w-28 rounded-lg px-3 py-1  hover:bg-[#9DFE00]  transition">
+                    <h2 style={{ fontFamily: 'TTTravels-Medium' }} className="text-white text-base sm:text-lg md:text-2xl font-medium">Meet The Cast</h2>
+                    <Link to={`/casts`}> <button className="text-white bg-transparent border border-[#9DFE00] h-10 w-28 rounded-lg px-3 py-1 text-base xl:text-lg  hover:bg-[#9DFE00]  transition">
                         View All
-                    </button>
+                    </button></Link>
                 </div>
 
                 <div className="relative">
@@ -124,9 +131,9 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="relative w-full  mx-auto px-[102px] py-28">
+            <div className="relative w-full  mx-auto px-10 sm:px-16 md:px-20 lg:px-24 py-28">
                 <div className="flex justify-between items-center mb-8">
-                    <h2 style={{ fontFamily: 'TTTravels-Medium' }} className="text-white text-2xl font-medium">Episodes</h2>
+                    <h2 style={{ fontFamily: 'TTTravels-Medium' }} className="text-white text-base sm:text-lg md:text-2xl font-medium">Episodes</h2>
                 </div>
 
                 <div className="relative">
@@ -167,9 +174,9 @@ const Home = () => {
             </div>
 
 
-            <div className="relative w-full  mx-auto px-[102px] pb-20">
+            <div className="relative w-full  mx-auto px-10 sm:px-16 md:px-20 lg:px-24 pb-20">
                 <div className="flex justify-between items-center mb-8">
-                    <h2 style={{ fontFamily: 'TTTravels-Medium' }} className="text-white text-2xl font-medium">Locations</h2>
+                    <h2 style={{ fontFamily: 'TTTravels-Medium' }} className="text-white text-base sm:text-lg md:text-2xl font-medium">Locations</h2>
                 </div>
 
                 <div className="relative">
