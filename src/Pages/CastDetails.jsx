@@ -8,7 +8,11 @@ import locationPng from '../assets/images/location.png'
 import redirectPng from '../assets/images/redirect.png'
 import episodePng from '../assets/images/episode.png'
 import seperatorPng from '../assets/images/seperator.png'
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import star from '../assets/images/Star.png'
+import miniStar from '../assets/images/MiniStar.png'
+import ellipse from '../assets/images/Ellipse.png'
+import ellipseBottom from '../assets/images/EllipseBottom.png'
 
 const CastDetails = () => {
     const char = useLoaderData();
@@ -30,9 +34,20 @@ const CastDetails = () => {
     getCharacterEpisodes();
     return (
         <div className='relative bg-[url(/characterDetailsCover.jpg)] bg-cover bg-center'>
+           
             <div className="absolute inset-0 bg-[#191D29] opacity-95 z-0"></div>
+             <img className='absolute left-0 bottom-0' src={ellipseBottom} alt="" />
+            <img className='absolute right-0 top-0' src={ellipse} alt="" />
+
+            <img className='absolute right-8 bottom-56
+                                    ' src={star} alt="" />
+            <img className='absolute left-8 bottom-96
+                                    ' src={star} alt="" />
+            <img className='absolute left-1/4 bottom-24
+                                    ' src={miniStar} alt="" />
+
             <div className='relative z-10 px-6 sm:px-12 md:px-16'>
-                
+
                 <div className='flex justify-center pt-[58px]'><img className='h-12' src={logo} alt="" /></div>
                 <div className=" py-16 xl:flex">
 
@@ -61,9 +76,9 @@ const CastDetails = () => {
                         </div>
 
                     </div>
-                    
+
                     <div className="xl:w-1/2 ">
-                    <img className="absolute hidden xl:block right-4/7 top-3/7" src={seperatorPng} alt="" />
+                        <img className="absolute hidden xl:block right-4/7 top-3/7" src={seperatorPng} alt="" />
                         <div className="grid grid-cols-3 gap-4 md:gap-10 justify-between">
                             <div className="p-[1px] w-full h-full  bg-gradient-to-r bg-clip-border from-[#84F729] to-[#15bffd] rounded-lg">
                                 <div

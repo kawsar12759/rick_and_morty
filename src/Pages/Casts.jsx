@@ -1,13 +1,25 @@
 import { Link, useLoaderData } from 'react-router-dom';
 import logo from '../assets/images/Logo.png'
-
+import star from '../assets/images/Star.png'
+import miniStar from '../assets/images/MiniStar.png'
+import ellipse from '../assets/images/Ellipse.png'
+import ellipseBottom from '../assets/images/EllipseBottom.png'
 
 const Casts = () => {
     const characters = useLoaderData().results;
 
     return (
         <div className='relative bg-[url(/characters_cover.jpg)] bg-cover bg-center'>
+
             <div className="absolute inset-0 bg-[#191D29] opacity-95 z-0"></div>
+            <img className='absolute left-0 bottom-0' src={ellipseBottom} alt="" />
+            <img className='absolute right-0 top-0' src={ellipse} alt="" />
+            <img className='absolute right-8 bottom-56
+                        ' src={star} alt="" />
+            <img className='absolute left-8 bottom-96
+                        ' src={star} alt="" />
+            <img className='absolute left-1/4 bottom-4
+                        ' src={miniStar} alt="" />
             <div className='relative z-10 px-10 md:px-16'>
                 <div className='flex justify-center pt-[58px]'><img className='h-12' src={logo} alt="" /></div>
                 <h3 style={{ fontFamily: 'TTTravels-DemiBold' }} className='text-6xl mt-14 mb-8 text-[#14D9E5]'>The Cast</h3>

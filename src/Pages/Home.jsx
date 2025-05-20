@@ -7,8 +7,11 @@ import { useState, useEffect, useRef, } from 'react'
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from 'react-router-dom'
-
-
+import spiral from '../assets/images/Spiral_Element.png'
+import star from '../assets/images/Star.png'
+import miniStar from '../assets/images/MiniStar.png'
+import ellipseBottom from '../assets/images/EllipseBottom.png'
+import ellipseTop from '../assets/images/EllipseTop.png'
 const Home = () => {
     const [characters, setCharacters] = useState([]);
     const [episodes, setEpisodes] = useState([]);
@@ -56,7 +59,16 @@ const Home = () => {
         <div className='relative bg-[url(/Неон.png)] bg-cover bg-center'>
 
             <div className="absolute inset-0 bg-[#191D29] opacity-90 z-0"></div>
-
+            <img className='absolute left-0 bottom-0' src={ellipseBottom} alt="" />
+            <img className='absolute right-0 top-0' src={ellipseTop} alt="" />
+            <img className='absolute right-0 bottom-0
+            ' src={spiral} alt="" />
+            <img className='absolute right-8 bottom-56
+            ' src={star} alt="" />
+            <img className='absolute left-8 bottom-48
+            ' src={star} alt="" />
+            <img className='absolute left-1/2 bottom-80
+            ' src={miniStar} alt="" />
             <div className='relative z-10'>
 
                 <div className='flex justify-center pt-[58px]'><img className='h-12' src={logo} alt="" /></div>
