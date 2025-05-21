@@ -87,7 +87,7 @@ const Home = () => {
                                 <p className='text-[#14D9E5] text-xs lg:text-sm mb-6 xl:mb-0'>Brilliant but boozy scientist Rick hijacks his fretful
                                     teenage grandson, Morty, for wild escapades
                                     in other worlds and alternate dimensions.</p>
-                                <button className='btn rounded-full h-10 w-40 lg:h-14 lg:w-52 flex border-none bg-gradient-to-r from-[#9DFE00] to-[#14D9E5] text-white items-center justify-center text-md  lg:text-xl'><img className='mr-2 h-5 w-5' src={play} alt="" /> Watch Now</button>
+                                <a href="https://www.youtube.com/watch?v=KQ9Cgdsa9tc" target='_blank'><button className='btn rounded-full h-10 w-40 lg:h-14 lg:w-52 flex border-none bg-gradient-to-r from-[#9DFE00] to-[#14D9E5] text-white items-center justify-center text-md  lg:text-xl'><img className='mr-2 h-5 w-5' src={play} alt="" /> Watch Now</button></a>
                             </div>
 
                         </div>
