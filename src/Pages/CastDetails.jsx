@@ -33,7 +33,7 @@ const CastDetails = () => {
 
     getCharacterEpisodes();
     return (
-        <div className='relative bg-[url(/characterDetailsCover.jpg)] bg-cover bg-center'>
+        <div className='relative bg-[url(/characterDetailsCover.jpg)] bg-cover bg-center max-w-[2600px] mx-auto min-w-[370px]'>
            
             <div className="absolute inset-0 bg-[#191D29] opacity-95 z-0"></div>
              <img className='absolute left-0 bottom-0' src={ellipseBottom} alt="" />
@@ -52,11 +52,11 @@ const CastDetails = () => {
                 <div className=" py-16 xl:flex">
 
                     <div className="xl:w-1/2 relative flex items-center justify-center">
-                        <div className="hidden xl:block absolute left-10  custom-text-outline "><h3 style={{ fontFamily: 'TTTravels-DemiBold' }} className="[writing-mode:vertical-rl] rotate-180 font-bold text-8xl opacity-25 text-[#1B202D]">{char.name}</h3></div>
+                        <div className="hidden absolute left-8 h-full xl:flex xl:items-center mr-4  custom-text-outline "><h3 style={{ fontFamily: 'TTTravels-DemiBold' }} className="[writing-mode:vertical-rl] rotate-180 font-bold text-8xl opacity-25 text-[#1B202D]">{char.name}</h3></div>
 
 
                         <div className="mb-14 xl:mb-0">
-                            <h3 style={{ fontFamily: 'TTTravels-DemiBold' }} className="text-center text-5xl text-[#14D9E5] mb-10">{char.name}</h3>
+                            <h3 style={{ fontFamily: 'TTTravels-DemiBold' }} className="text-center text-3xl sm:text-4xl lg:text-5xl text-[#14D9E5] mb-10">{char.name}</h3>
                             < div
                                 className=" p-[1px] sm:h-80 sm:w-80 md:h-96 md:w-96 xl:h-80 xl:w-80    bg-gradient-to-r bg-clip-border from-[#84F729] to-[#15bffd] rounded-lg"
                             >
@@ -77,7 +77,7 @@ const CastDetails = () => {
 
                     </div>
 
-                    <div className="xl:w-1/2 ">
+                    <div className="xl:w-1/2">
                         <img className="absolute hidden xl:block right-4/7 top-3/7" src={seperatorPng} alt="" />
                         <div className="grid grid-cols-3 gap-4 md:gap-10 justify-between">
                             <div className="p-[1px] w-full h-full  bg-gradient-to-r bg-clip-border from-[#84F729] to-[#15bffd] rounded-lg">

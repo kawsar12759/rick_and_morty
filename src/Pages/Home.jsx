@@ -56,7 +56,7 @@ const Home = () => {
         }
     };
     return (
-        <div className='relative bg-[url(/Неон.png)] bg-cover bg-center'>
+        <div className='relative bg-[url(/Неон.png)] bg-cover bg-center max-w-[2600px] mx-auto min-w-[370px]'>
 
             <div className="absolute inset-0 bg-[#191D29] opacity-90 z-0"></div>
             <img className='absolute left-0 bottom-0' src={ellipseBottom} alt="" />
@@ -72,7 +72,7 @@ const Home = () => {
             <div className='relative z-10'>
 
                 <div className='flex justify-center pt-[58px]'><img className='h-12' src={logo} alt="" /></div>
-                <div className='flex text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl pt-16 lg:pt-28 2xl:pt-36 px-10 sm:px-16 md:px-28 lg:px-36 xl:px-60 2xl:px-72  3xl:px-80' style={{ fontFamily: 'TTTravels-ExtraBoldItalic' }}>
+                <div className='flex text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl pt-16 lg:pt-28 2xl:pt-36 px-6 sm:px-14 md:px-28 lg:px-36 xl:px-60 2xl:px-72  3xl:px-80' style={{ fontFamily: 'TTTravels-ExtraBoldItalic' }}>
                     <div>
 
                         <div ><h1 className='relative xl:text-center'>    <span className="relative inline-block">
@@ -82,11 +82,13 @@ const Home = () => {
                             T
                         </span>HE <span className='inline'><img className="h-[1em]  mb-6 inline" src={portal} alt="" /></span> <span className='bg-gradient-to-r from-[#9DFE00] to-[#14D9E5] bg-clip-text text-transparent' style={{ fontFamily: 'TTTravels-ExtraBold' }}>RICK & MORTY</span> WIKI </h1>
                         </div>
-                        <div className='xl:flex xl:flex-row-reverse items-center justify-center gap-16 py-5 xl:px-24' style={{ fontFamily: 'TTTravels-DemiBold' }}>
-                            <p className='text-[#14D9E5] text-xs lg:text-sm mb-6 xl:mb-0'>Brilliant but boozy scientist Rick hijacks his fretful
-                                teenage grandson, Morty, for wild escapades
-                                in other worlds and alternate dimensions.</p>
-                            <button className='btn rounded-full h-10 w-40 lg:h-14 lg:w-52 flex border-none bg-gradient-to-r from-[#9DFE00] to-[#14D9E5] text-white items-center justify-center text-md  lg:text-xl'><img className='mr-2 h-5 w-5' src={play} alt="" /> Watch Now</button>
+                        <div className='flex items-center justify-center ' style={{ fontFamily: 'TTTravels-DemiBold' }}>
+                            <div className='xl:flex xl:flex-row-reverse items-center justify-center gap-16 py-5 xl:px-10 xl:w-full 2xl:max-w-3/4'>
+                                <p className='text-[#14D9E5] text-xs lg:text-sm mb-6 xl:mb-0'>Brilliant but boozy scientist Rick hijacks his fretful
+                                    teenage grandson, Morty, for wild escapades
+                                    in other worlds and alternate dimensions.</p>
+                                <button className='btn rounded-full h-10 w-40 lg:h-14 lg:w-52 flex border-none bg-gradient-to-r from-[#9DFE00] to-[#14D9E5] text-white items-center justify-center text-md  lg:text-xl'><img className='mr-2 h-5 w-5' src={play} alt="" /> Watch Now</button>
+                            </div>
 
                         </div>
                     </div>
@@ -119,7 +121,7 @@ const Home = () => {
                                         className="w-[258px] h-[216px] object-cover rounded-sm"
                                     />
                                     <div className='h-[62px] flex items-center'>
-                                        <p className="poppins-medium text-md">{char.name}</p>
+                                        <p className="poppins-medium text-base sm:text-md">{char.name}</p>
                                     </div>
                                 </div>
 
@@ -160,8 +162,8 @@ const Home = () => {
                                 className="min-w-[360px] h-[96px] p-[1px]  bg-gradient-to-r from-[#84F729] to-[#15bffd]  rounded-xl">
                                 <div style={{ clipPath: 'polygon(0 0, 100% 0, 100% 60%, 87% 100%, 0 100%)' }} className='bg-[#262934] h-full w-full rounded-xl text-white  flex items-center p-6  group'>
                                     <div style={{ fontFamily: 'TTTravels-Medium' }}>
-                                        <h4 className='text-lg font-light'>{episode.episode}</h4>
-                                        <p className=" text-2xl font-medium">{episode.name}</p>
+                                        <h4 className='text-sm sm:text-lg font-light'>{episode.episode}</h4>
+                                        <p className="text-lg sm:text-2xl font-medium">{episode.name}</p>
                                     </div>
                                 </div>
 
@@ -203,8 +205,8 @@ const Home = () => {
                                 className="min-w-[360px] h-[96px] p-[1px]  bg-gradient-to-r from-[#84F729] to-[#15bffd]  rounded-xl">
                                 <div style={{ clipPath: 'polygon(0 0, 100% 0, 100% 60%, 87% 100%, 0 100%)' }} className='bg-[#262934] h-full w-full rounded-xl text-white  flex items-center p-6  group'>
                                     <div style={{ fontFamily: 'TTTravels-Medium' }}>
-                                        <h4 className='text-lg font-light'>#{location.id}</h4>
-                                        <p className=" text-2xl font-medium">{location.name}</p>
+                                        <h4 className='text-sm sm:text-lg font-light'>#{location.id}</h4>
+                                        <p className=" text=lg sm:text-2xl font-medium">{location.name}</p>
                                     </div>
                                 </div>
 

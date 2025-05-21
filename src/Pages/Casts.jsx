@@ -22,7 +22,7 @@ const Casts = () => {
                         ' src={miniStar} alt="" />
             <div className='relative z-10 px-10 md:px-16'>
                 <div className='flex justify-center pt-[58px]'><img className='h-12' src={logo} alt="" /></div>
-                <h3 style={{ fontFamily: 'TTTravels-DemiBold' }} className='text-6xl mt-14 mb-8 text-[#14D9E5]'>The Cast</h3>
+                <h3 style={{ fontFamily: 'TTTravels-DemiBold' }} className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-14 mb-8 text-[#14D9E5]'>The Cast</h3>
                 <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-8 lg:gap-10 pb-10'>
                     {characters.map((char) => (
                         < Link to={`/casts/${char.id}`}
