@@ -13,13 +13,17 @@ import miniStar from '../assets/images/MiniStar.png'
 import ellipseBottom from '../assets/images/EllipseBottom.png'
 import ellipseTop from '../assets/images/EllipseTop.png'
 const Home = () => {
+    //states for holding API data
     const [characters, setCharacters] = useState([]);
     const [episodes, setEpisodes] = useState([]);
     const [locations, setLocations] = useState([]);
+
+    //refs for scrolling
     const characterRef = useRef();
     const episodeRef = useRef();
     const locationRef = useRef();
 
+    //fetch characters
     useEffect(() => {
         fetch('https://rickandmortyapi.com/api/character')
             .then(res => res.json())
@@ -29,6 +33,7 @@ const Home = () => {
             .catch(err => console.error(err));
     }, []);
 
+    //fetch episodes
     useEffect(() => {
         fetch('https://rickandmortyapi.com/api/episode')
             .then(res => res.json())
@@ -38,6 +43,7 @@ const Home = () => {
             .catch(err => console.error(err));
     }, []);
 
+    //fetch locations
     useEffect(() => {
         fetch('https://rickandmortyapi.com/api/location')
             .then(res => res.json())
@@ -47,6 +53,7 @@ const Home = () => {
             .catch(err => console.error(err));
     }, []);
 
+    //scroll handling
     const handleScroll = (ref, direction) => {
         if (ref.current) {
             ref.current.scrollBy({
@@ -57,7 +64,7 @@ const Home = () => {
     };
     return (
         <div className='relative bg-[url(/Неон.png)] bg-cover bg-center max-w-[2600px] mx-auto min-w-[370px]'>
-
+            {/* Overlay & Background Decorations */}
             <div className="absolute inset-0 bg-[#191D29] opacity-90 z-0"></div>
             <img className='absolute left-0 bottom-0' src={ellipseBottom} alt="" />
             <img className='absolute right-0 top-0' src={ellipseTop} alt="" />
@@ -69,9 +76,13 @@ const Home = () => {
             ' src={star} alt="" />
             <img className='absolute left-1/2 bottom-80
             ' src={miniStar} alt="" />
-            <div className='relative z-10'>
 
+            {/* Main container */}
+            <div className='relative z-10'>
+                {/* Logo */}
                 <div className='flex justify-center pt-[58px]'><img className='h-12' src={logo} alt="" /></div>
+
+                {/* Bannar Section */}
                 <div className='flex text-white text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl pt-16 lg:pt-28 2xl:pt-36 px-6 sm:px-14 md:px-28 lg:px-36 xl:px-60 2xl:px-72  3xl:px-80' style={{ fontFamily: 'TTTravels-ExtraBoldItalic' }}>
                     <div>
 
@@ -82,6 +93,7 @@ const Home = () => {
                             T
                         </span>HE <span className='inline'><img className="h-[1em]  mb-6 inline" src={portal} alt="" /></span> <span className='bg-gradient-to-r from-[#9DFE00] to-[#14D9E5] bg-clip-text text-transparent' style={{ fontFamily: 'TTTravels-ExtraBold' }}>RICK & MORTY</span> WIKI </h1>
                         </div>
+                        {/* Description & Watch Now Button */}
                         <div className='flex items-center justify-center ' style={{ fontFamily: 'TTTravels-DemiBold' }}>
                             <div className='xl:flex xl:flex-row-reverse items-center justify-center gap-16 py-5 xl:px-10 xl:w-full 2xl:max-w-3/4'>
                                 <p className='text-[#14D9E5] text-xs lg:text-sm mb-6 xl:mb-0'>Brilliant but boozy scientist Rick hijacks his fretful
@@ -92,10 +104,12 @@ const Home = () => {
 
                         </div>
                     </div>
+                    {/* Gun image beside the text */}
                     <div><img className='h-full' src={gun} alt="" /></div>
                 </div>
 
             </div>
+            {/* Characters Section */}
             <div className="relative w-full  mx-auto px-10 sm:px-16 md:px-20 lg:px-24 pt-8">
                 <div className="flex justify-between items-center mb-3">
                     <h2 style={{ fontFamily: 'TTTravels-Medium' }} className="text-white text-base sm:text-lg md:text-2xl font-medium">Meet The Cast</h2>
@@ -103,7 +117,7 @@ const Home = () => {
                         View All
                     </button></Link>
                 </div>
-
+                {/* Characters Scrollable Row */}
                 <div className="relative">
                     <div
                         ref={characterRef}
@@ -128,7 +142,7 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
-
+                    {/* Scroll buttons */}
                     <button
                         onClick={() => handleScroll(characterRef, 'right')}
                         className="absolute -right-6 top-1/2 transform -translate-y-1/2 z-10 bg-white w-12 h-12 rounded-full shadow-md flex items-center text-2xl text-[#9DFE00] font-bold justify-center  hover:bg-gray-300 transition"
@@ -144,12 +158,12 @@ const Home = () => {
                     </button>
                 </div>
             </div>
-
+            {/* Episodes Section */}
             <div className="relative w-full  mx-auto px-10 sm:px-16 md:px-20 lg:px-24 py-28">
                 <div className="flex justify-between items-center mb-8">
                     <h2 style={{ fontFamily: 'TTTravels-Medium' }} className="text-white text-base sm:text-lg md:text-2xl font-medium">Episodes</h2>
                 </div>
-
+                {/* Episodes Scrollable Row */}
                 <div className="relative">
                     <div
                         ref={episodeRef}
@@ -170,7 +184,7 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
-
+                    {/* Scroll buttons */}
                     <button
                         onClick={() => handleScroll(episodeRef, 'right')}
                         className="absolute -right-6 top-1/2 transform -translate-y-1/2 z-10 bg-white w-12 h-12 rounded-full shadow-md flex items-center text-2xl text-[#9DFE00] font-bold justify-center  hover:bg-gray-300 transition"
@@ -187,12 +201,13 @@ const Home = () => {
                 </div>
             </div>
 
+            {/* Locations Section */}
 
             <div className="relative w-full  mx-auto px-10 sm:px-16 md:px-20 lg:px-24 pb-20">
                 <div className="flex justify-between items-center mb-8">
                     <h2 style={{ fontFamily: 'TTTravels-Medium' }} className="text-white text-base sm:text-lg md:text-2xl font-medium">Locations</h2>
                 </div>
-
+                {/* Locations Scrollable Row */}
                 <div className="relative">
                     <div
                         ref={locationRef}
@@ -213,7 +228,7 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
-
+                    {/*Scroll Buttons */}
                     <button
                         onClick={() => handleScroll(locationRef, 'right')}
                         className="absolute -right-6 top-1/2 transform -translate-y-1/2 z-10 bg-white w-12 h-12 rounded-full shadow-md flex items-center text-2xl text-[#9DFE00] font-bold justify-center  hover:bg-gray-300 transition"
